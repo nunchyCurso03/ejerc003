@@ -23,6 +23,9 @@ public class Ordenador{
     private double peso;
 
 
+    public Ordenador() {
+    }
+
     public Ordenador(Color color, boolean siIntel, int teclas, double peso) {
         this.color = color;
         this.siIntel = siIntel;
