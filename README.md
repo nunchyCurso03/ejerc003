@@ -36,3 +36,45 @@ curl -X POST http://localhost:8080/api/boligrafo \
 
 
 
+
+***************************************************************************
+
+**************************Crear un Ordenador (POST)
+ 
+curl -X POST http://localhost:8080/api/ordenador \
+    -H "Content-Type: application/json" \
+    -d '{"color": "AZUL", "siIntel": true, "teclas": 104, "peso": 1.5}'
+ 
+curl -X POST http://localhost:8080/api/ordenador \
+    -H "Content-Type: application/json" \
+    -d '{"color": "ROJO", "siIntel": false, "teclas": 108, "peso": 1.8}'
+ 
+curl -X POST http://localhost:8080/api/ordenador \
+    -H "Content-Type: application/json" \
+    -d '{"color": "NEGRO", "siIntel": true, "teclas": 107, "peso": 2.0}'
+
+
+
+
+***********************Listar Todos los Ordenadores (GET)
+ 
+curl -X GET http://localhost:8080/api/ordenador
+Obtener un Ordenador por ID (GET)
+ 
+curl -X GET http://localhost:8080/api/ordenador/1
+
+
+*******************Actualizar un Ordenador (PUT)
+ 
+curl -X PUT http://localhost:8080/api/ordenador \
+    -H "Content-Type: application/json" \
+    -d '{"id": 1, "color": "BLANCO", "siIntel": false, "teclas": 110, "peso": 2.2}'
+
+
+
+**********************Eliminar un Ordenador (DELETE)
+ 
+curl -X DELETE http://localhost:8080/api/ordenador/1
+
+
+
